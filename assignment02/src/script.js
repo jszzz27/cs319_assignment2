@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import items from "./product.json";
+
 const GameShop = () => {
   const [cart, setCart] = useState([]);
   const [listItems, setListItems] = useState();
@@ -16,13 +17,16 @@ const GameShop = () => {
   const [state, setState] = useState("");
   const [zip, setZip] = useState("");
   const [cartItems, setCartItems] = useState([]);
+
   useEffect(() => {
     makeList();
   }, [filter]);
+
   useEffect(() => {
     makeList();
     total();
   }, [cart]);
+
   const total = () => {
     let totalVal = 0;
     for (let i = 0; i < cart.length; i++) {
@@ -32,34 +36,42 @@ const GameShop = () => {
     totalVal = totalVal.toFixed(2);
     setCartTotal(totalVal);
   };
+
   const orderTime = () => {
     setCurrState(2);
   };
+
   const browseTime = () => {
     setCart([]);
     setCurrState(0);
   };
+
   function howMany(id) {
     let hm = cart.filter((cartItem) => cartItem.id === id);
     return hm.length;
   }
+
   const checkoutTime = () => {
     setFilter("");
     setCurrState(1);
   };
+
   const returnTime = () => {
     setCurrState(0);
   };
+
   const addToCart = (product) => {
     setCart([...cart, product]);
     setCartCount(cartCount + 1);
   };
+
   const removeFromCart = (product) => {
     let hardCopy = [...cart];
     hardCopy = hardCopy.filter((cartItem) => cartItem.id !== product.id);
     setCart(hardCopy);
     setCartCount(cartCount - 1);
   };
+
   const makeCartList = () => {
     let copyList = [];
     let copyCount = 0;
@@ -86,6 +98,7 @@ const GameShop = () => {
       ))
     );
   };
+
   const makeOrderlist = () => {
     let copyList = [];
     let copyCount = 0;
@@ -112,6 +125,7 @@ const GameShop = () => {
       ))
     );
   };
+
   const makeList = () => {
     let copyList = [];
     let copyCount = 0;
@@ -169,6 +183,7 @@ const GameShop = () => {
       ))
     );
   };
+
   if (currState === 0) {
     return (
       <div>
@@ -335,4 +350,5 @@ const GameShop = () => {
     );
   }
 };
+
 export default GameShop;
