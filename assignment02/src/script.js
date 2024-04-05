@@ -218,7 +218,7 @@ const GameShop = () => {
               }}></input>
             <br></br>
             <label for="email">Email: </label>
-            <input required type="email" id="email"
+            <input type="email" id="email" required="true" pattern="/^\S+@\S+$/i" 
               onChange={(e) => {
                 setEmail(e.target.value);
                 console.log(e.target.value);
