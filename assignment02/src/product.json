@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "title": "Halo 2",
+        "price": 15.95,
+        "description": "Halo 2 is a critically acclaimed first-person shooter video game that continues the epic sci-fi saga of Master Chief and introduces new characters, expanded gameplay mechanics, and an engaging multiplayer experience",
+        "category": "Linear Action",
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/9/92/Halo2-cover.png/220px-Halo2-cover.png"
+    },
+    {
+        "id": 2,
+        "title": "Battlefeild 1",
+        "price": 29.99,
+        "description": "Battlefield 1 is a visually stunning and immersive first-person shooter set in the gritty and chaotic battles of World War I, offering a diverse range of warfronts, vehicles, and intense multiplayer action",
+        "category": "Multiplayer",
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Battlefield_1_cover_art.jpg/220px-Battlefield_1_cover_art.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Elden Ring",
+        "price": 59.99,
+        "description": "Elden Ring is an expansive action role-playing game crafted by the collaboration between Hidetaka Miyazaki and George R. R. Martin, offering a vast and intricate open-world filled with dark fantasy lore, challenging gameplay, and epic battles against formidable foes",
+        "category": "Open World",
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Elden_Ring_Box_art.jpg/220px-Elden_Ring_Box_art.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Far Cry 3",
+        "price": 19.99,
+        "description": "Far Cry 3 is an open-world action-adventure game that plunges players into a tropical paradise turned nightmare, where they must navigate through lush environments, confront dangerous wildlife, and outsmart a ruthless pirate gang while unraveling the mysteries of the island",
+        "category": "Action Adventure",
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c6/Far_Cry_3_PAL_box_art.jpg/220px-Far_Cry_3_PAL_box_art.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Assassin's Creed Brotherhood",
+        "price": 19.99,
+        "description": "Assassin's Creed Brotherhood is a thrilling action-adventure game set in Renaissance Italy, where players assume the role of Ezio Auditore da Firenze as he leads a brotherhood of assassins against the powerful Templar Order, featuring an immersive historical backdrop, intricate stealth mechanics, and engaging open-world exploration",
+        "category": "Open World",
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Assassins_Creed_brotherhood_cover.jpg/220px-Assassins_Creed_brotherhood_cover.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Star Wars Jedi: Fallen Order",
+        "price": 39.99,
+        "description": "Star Wars Jedi: Fallen Order is an immersive action-adventure game set in the iconic Star Wars universe, where players take on the role of a young Jedi Padawan named Cal Kestis, navigating through thrilling combat, intricate puzzles, and epic encounters while uncovering the mysteries of the Force and evading the Empire's relentless pursuit",
+        "category": "Action Adventure",
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/1/13/Cover_art_of_Star_Wars_Jedi_Fallen_Order.jpg/220px-Cover_art_of_Star_Wars_Jedi_Fallen_Order.jpg"
+    }
+]
