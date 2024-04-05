@@ -160,19 +160,11 @@ const GameShop = () => {
             </div>
             <div>
               <div>${product.price}</div>
-              <button
-                type="button"
-                variant="light"
-                onClick={() => removeFromCart(product)}
-              >
+              <button type="button" variant="light" onClick={() => removeFromCart(product)}>
                 {" "}
                 -{" "}
               </button>{" "}
-              <button
-                type="button"
-                variant="light"
-                onClick={() => addToCart(product)}
-              >
+              <button type="button" variant="light" onClick={() => addToCart(product)}>
                 {" "}
                 +{" "}
               </button>
@@ -190,27 +182,20 @@ const GameShop = () => {
         <div>
           <h1>38's GameStop</h1>
           <div class="topnav">
-            <button
-              type="button"
+            <button type="button"
               onClick={() => {
                 checkoutTime();
                 makeCartList();
-              }}
-              id="checkout"
-            >
+              }} id="checkout">
               Checkout
             </button>
             <div class="search-container">
               <form action="/action_page.php">
-                <input
-                  type="text"
-                  placeholder="Search.."
-                  name="search"
+                <input type="text" placeholder="Search.." name="search"
                   onChange={(e) => {
                     setFilter(e.target.value);
                     console.log(e.target.value);
-                  }}
-                ></input>
+                  }}></input>
               </form>
             </div>
           </div>
