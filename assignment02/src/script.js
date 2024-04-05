@@ -32,7 +32,7 @@ const GameShop = () => {
     for (let i = 0; i < cart.length; i++) {
       totalVal += cart[i].price;
     }
-    totalVal = totalVal * 1.07;
+    totalVal = totalVal * 1.06;
     totalVal = totalVal.toFixed(2);
     setCartTotal(totalVal);
   };
@@ -132,10 +132,7 @@ const GameShop = () => {
     for (let i in items) {
       let oldval = copyCount;
       for (let obj in items[i]) {
-        if (
-          items[i]["title"].toLowerCase().includes(filter.toLowerCase()) ||
-          filter === ""
-        ) {
+        if (items[i]["title"].toLowerCase().includes(filter.toLowerCase()) || filter === "") {
           if (oldval === copyCount) {
             copyCount++;
             copyList[oldval] = {};
@@ -144,8 +141,7 @@ const GameShop = () => {
         }
       }
     }
-    setListItems(
-      copyList.map((product) => (
+    setListItems(copyList.map((product) => (
         <div key={product.id}>
           <div>
             <div>
@@ -161,12 +157,11 @@ const GameShop = () => {
             <div>
               <div>${product.price}</div>
               <button type="button" variant="light" onClick={() => removeFromCart(product)}>
+                {" "}-{" "}
+              </button>
                 {" "}
-                -{" "}
-              </button>{" "}
               <button type="button" variant="light" onClick={() => addToCart(product)}>
-                {" "}
-                +{" "}
+                {" "}+{" "}
               </button>
             </div>
             <div>Quantity ordered: {howMany(product.id)}</div>
@@ -186,9 +181,7 @@ const GameShop = () => {
               onClick={() => {
                 checkoutTime();
                 makeCartList();
-              }} id="checkout">
-              Checkout
-            </button>
+              }} id="checkout">Checkout</button>
             <div class="search-container">
               <form action="/action_page.php">
                 <input type="text" placeholder="Search.." name="search"
@@ -209,9 +202,7 @@ const GameShop = () => {
         <div>
           <h1>38's GameStop</h1>
           <div class="topnav">
-            <button type="button" onClick={() => returnTime()} id="checkout">
-              Return
-            </button>
+            <button type="button" onClick={() => returnTime()} id="checkout">Return</button>
           </div>
           <h2 id="cart">Current Cart:</h2>
           <div class="grid-container">{cartItems}</div>
@@ -221,93 +212,61 @@ const GameShop = () => {
           <form id="payinfo">
             <h2>Payment Info</h2>
             <label for="fullname">Full Name: </label>
-            <input
-              required
-              type="text"
-              id="fullname"
+            <input required type="text" id="fullname"
               onChange={(e) => {
                 setFullName(e.target.value);
-              }}
-            ></input>
+              }}></input>
             <br></br>
             <label for="email">Email: </label>
-            <input
-              required
-              type="text"
-              id="email"
+            <input required type="email" id="email"
               onChange={(e) => {
                 setEmail(e.target.value);
                 console.log(e.target.value);
-              }}
-            ></input>
+              }}></input>
             <br></br>
             <label for="card">Card: </label>
-            <input
-              maxLength={16}
-              required
-              type="text"
-              id="card"
+            <input required type="tel" inputMode="numeric" pattern="[0-9\s]{13,19}"
+                    autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" id="card"
               onChange={(e) => {
                 setCard(e.target.value);
                 console.log(e.target.value);
-              }}
-            ></input>
+              }}></input>
             <br></br>
             <label for="address">Address: </label>
-            <input
-              required
-              type="text"
-              id="address"
+            <input required type="text" id="address"
               onChange={(e) => {
                 setAddress(e.target.value);
                 console.log(e.target.value);
-              }}
-            ></input>
+              }}></input>
             <br></br>
             <label for="city">City: </label>
-            <input
-              required
-              type="text"
-              id="city"
+            <input required type="text" id="city"
               onChange={(e) => {
                 setCity(e.target.value);
                 console.log(e.target.value);
-              }}
-            ></input>
+              }}></input>
             <br></br>
             <label for="state">State: </label>
-            <input
-              required
-              type="text"
-              id="state"
+            <input required type="text" id="state"
               onChange={(e) => {
                 setState(e.target.value);
                 console.log(e.target.value);
-              }}
-            ></input>
+              }}></input>
             <br></br>
             <label for="zip">Zip: </label>
-            <input
-              required
-              maxLength={5}
-              type="text"
-              id="zip"
+            <input required type="number" id="zip"
               onChange={(e) => {
+                e.target.value = e.target.value.slice(0, 5);
                 setZip(e.target.value);
                 console.log(e.target.value);
-              }}
-            ></input>
+              }}></input>
           </form>
-          <button
-            type="button"
+          <button type="button"
             onClick={() => {
               makeOrderlist();
               orderTime();
               makeList();
-            }}
-          >
-            Order
-          </button>
+            }}>Order</button>
         </div>
       </div>
     );
@@ -317,9 +276,7 @@ const GameShop = () => {
         <div>
           <h1>38's GameStop</h1>
           <div class="topnav">
-            <button type="button" onClick={() => browseTime()} id="checkout">
-              Back to browse
-            </button>
+            <button type="button" onClick={() => browseTime()} id="checkout">Back to browse</button>
           </div>
           <div class="grid-container">{orderItems}</div>
           <div class="totalprice">Total: ${cartTotal}</div>
