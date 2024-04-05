@@ -225,9 +225,10 @@ const GameShop = () => {
               }}></input>
             <br></br>
             <label for="card">Card: </label>
-            <input required type="tel" inputMode="numeric" pattern="[0-9\s]{13,19}"
+            <input required type="number" inputMode="numeric" pattern="[0-9\s]{13,19}"
                     autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" id="card"
               onChange={(e) => {
+                e.target.value = e.target.value.slice(0, 16);
                 setCard(e.target.value);
                 console.log(e.target.value);
               }}></input>
