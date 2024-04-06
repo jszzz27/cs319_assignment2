@@ -261,13 +261,13 @@ const GameShop = () => {
                 setZip(e.target.value);
                 console.log(e.target.value);
               }}></input>
-          </form>
-          <button type="button"
-            onClick={() => {
+            <button type="button"
+              onClick={() => {
               makeOrderlist();
               orderTime();
               makeList();
             }}>Order</button>
+          </form>
         </div>
       </div>
     );
