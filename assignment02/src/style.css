@@ -24,7 +24,11 @@ h1 {
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
-  padding: 50px;
+  grid-template-rows: 800px 300px;
+  column-gap: 100px;
+  margin-left: 130px;
+  margin-right: 130px;
+  margin-top: 50px;
 }
 
 .grid-item {
@@ -34,15 +38,26 @@ h1 {
   text-align: center;
 }
 
+.grid-container2 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 700px 300px;
+  margin-left: 130px;
+  margin-right: 130px;
+  margin-bottom: 20px;
+  margin-top: 10px
+}
+
 .topnav {
   overflow: hidden;
   background-color: black;
 }
 
 .topnav #checkout {
-  background-color: #4caf50;
+  background-color: #f76b8a;
   border: none;
   color: white;
+  margin-left: 131px;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -63,6 +78,7 @@ h1 {
 
 .topnav .search-container {
   float: right;
+  padding-right: 214px;
 }
 
 .topnav input[type="text"] {
@@ -94,8 +110,9 @@ img {
 
 #payinfo {
   border-style: solid;
-  padding-left: 1%;
+  padding-left: 130px;
   padding-bottom: 1%;
+  margin-bottom: 20px
 }
 
 #payinfo h2 {
@@ -104,11 +121,16 @@ img {
 }
 
 .totalprice {
-  padding-left: 1%;
+  padding-left: 130px;
   font-size: x-large;
 }
 
 #cart {
   font-size: xx-large;
   margin-top: 0;
+  margin-left: 130px;
+}
+
+.infoFn {
+  padding-left: 130px;
 }
